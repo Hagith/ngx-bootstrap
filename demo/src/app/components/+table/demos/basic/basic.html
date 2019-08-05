@@ -1,28 +1,9 @@
 <table bs-table [dataSource]="dataSource">
-  <!-- Position Column -->
-  <ng-container cdkColumnDef="position">
-    <th cdk-header-cell *cdkHeaderCellDef> No.</th>
-    <td cdk-cell *cdkCellDef="let element"> {{element.position}} </td>
-  </ng-container>
+  <bs-text-column name="position"></bs-text-column>
+  <bs-text-column name="name"></bs-text-column>
+  <bs-text-column name="weight"></bs-text-column>
+  <bs-text-column name="symbol"></bs-text-column>
 
-  <!-- Name Column -->
-  <ng-container cdkColumnDef="name">
-    <th cdk-header-cell *cdkHeaderCellDef> Name</th>
-    <td cdk-cell *cdkCellDef="let element"> {{element.name}} </td>
-  </ng-container>
-
-  <!-- Weight Column -->
-  <ng-container cdkColumnDef="weight">
-    <th cdk-header-cell *cdkHeaderCellDef> Weight</th>
-    <td cdk-cell *cdkCellDef="let element"> {{element.weight}} </td>
-  </ng-container>
-
-  <!-- Symbol Column -->
-  <ng-container cdkColumnDef="symbol">
-    <th cdk-header-cell *cdkHeaderCellDef> Symbol</th>
-    <td cdk-cell *cdkCellDef="let element"> {{element.symbol}} </td>
-  </ng-container>
-
-  <tr cdk-header-row *cdkHeaderRowDef="displayedColumns"></tr>
-  <tr cdk-row *cdkRowDef="let row; columns: displayedColumns;"></tr>
+  <tr bs-header-row *bsHeaderRowDef="displayedColumns"></tr>
+  <tr bs-row *bsRowDef="let row; columns: displayedColumns;"></tr>
 </table>
