@@ -3,6 +3,7 @@ import { DemoTopSectionComponent } from '../../docs/demo-section-components/demo
 import { ContentSection } from '../../docs/models/content-section.model';
 
 import { DemoTableBasicComponent } from './demos/basic/basic';
+import { DemoTableCustomComponent } from './demos/custom/custom';
 
 export const demoComponentContent: ContentSection[] = [
   {
@@ -24,6 +25,13 @@ export const demoComponentContent: ContentSection[] = [
         component: require('!!raw-loader!./demos/basic/basic'),
         html: require('!!raw-loader!./demos/basic/basic.html'),
         outlet: DemoTableBasicComponent
+      },
+      {
+        title: 'Custom',
+        anchor: 'custom',
+        component: require('!!raw-loader!./demos/custom/custom'),
+        html: require('!!raw-loader!./demos/custom/custom.html'),
+        outlet: DemoTableCustomComponent
       }
     ]
   }

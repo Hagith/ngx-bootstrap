@@ -1,0 +1,45 @@
+<table bs-table [dataSource]="transactions" class="table-bordered table-striped">
+  <!-- Item Column -->
+  <ng-container bsColumnDef="item">
+    <th bs-header-cell *bsHeaderCellDef> Item</th>
+    <td bs-cell *bsCellDef="let transaction"> {{transaction.item}} </td>
+    <td bs-footer-cell *bsFooterCellDef><strong>Total</strong></td>
+  </ng-container>
+
+  <!-- Cost Column -->
+  <ng-container bsColumnDef="cost">
+    <th bs-header-cell *bsHeaderCellDef> Cost</th>
+    <td bs-cell *bsCellDef="let transaction"> {{transaction.cost | currency}} </td>
+    <td bs-footer-cell *bsFooterCellDef><strong>{{total | currency}}</strong></td>
+  </ng-container>
+
+  <!-- Item Description Column -->
+  <ng-container bsColumnDef="item-description">
+    <th bs-header-cell *bsHeaderCellDef> Name of the item purchased</th>
+  </ng-container>
+
+  <!-- Cost Description Column -->
+  <ng-container bsColumnDef="cost-description">
+    <th bs-header-cell *bsHeaderCellDef> Cost of the item in USD</th>
+  </ng-container>
+
+  <!-- Disclaimer column -->
+  <ng-container bsColumnDef="disclaimer">
+    <td bs-footer-cell *bsFooterCellDef colspan="2">
+      Please note that the cost of items displayed are completely and totally made up.
+    </td>
+  </ng-container>
+
+  <!-- The table will render two header rows, one data row per data object, and two footer rows. -->
+  <tr bs-header-row *bsHeaderRowDef="displayedColumns"
+      class="example-first-header-row">
+  </tr>
+  <tr bs-header-row *bsHeaderRowDef="['item-description', 'cost-description']"
+      class="example-second-header-row">
+  </tr>
+
+  <tr bs-row *bsRowDef="let row; columns: displayedColumns;"></tr>
+
+  <tr bs-footer-row *bsFooterRowDef="displayedColumns" class="example-first-footer-row"></tr>
+  <tr bs-footer-row *bsFooterRowDef="['disclaimer']" class="example-second-footer-row"></tr>
+</table>
