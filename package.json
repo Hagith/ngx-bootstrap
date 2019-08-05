@@ -88,13 +88,15 @@
   "homepage": "https://github.com/valor-software/ngx-bootstrap#readme",
   "peerDependencies": {
     "@angular/common": ">=7.0.0",
-    "@angular/core": ">=7.0.0"
+    "@angular/core": ">=7.0.0",
+    "@angular/cdk": ">=7.0.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "0.801.2",
     "@angular-devkit/core": "8.2.0",
     "@angular-devkit/schematics": "8.2.0",
     "@angular/animations": "8.2.0",
+    "@angular/cdk": "8.1.2",
     "@angular/cli": "8.2.0",
     "@angular/common": "8.2.0",
     "@angular/compiler": "8.2.0",

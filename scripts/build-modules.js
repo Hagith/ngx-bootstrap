@@ -31,7 +31,7 @@ async function buildAll() {
 
   const requiredModules = ['collapse', 'chronos', 'utils', 'positioning', 'component-loader', 'dropdown', 'locale',
     'alert', 'buttons', 'carousel', 'mini-ngrx', 'modal', 'pagination', 'popover', 'progressbar', 'rating',
-    'sortable', 'tabs', 'timepicker', 'tooltip', 'typeahead', 'datepicker', 'accordion', 'common'];
+    'sortable', 'table', 'tabs', 'timepicker', 'tooltip', 'typeahead', 'datepicker', 'accordion', 'common'];
 
   await buildModules(requiredModules);
 

@@ -100,6 +100,12 @@ export const routes = [
       './components/+sortable/demo-sortable.module#DemoSortableModule'
   },
   {
+    path: 'table',
+    data: ['Table', {moduleName: 'TableModule', moduleFolder: 'table'}],
+    // component: TableSectionComponent
+    loadChildren: './components/+table/demo-table.module#DemoTableModule'
+  },
+  {
     path: 'tabs',
     data: ['Tabs', {moduleName: 'TabsModule', moduleFolder: 'tabs'}],
     // component: TabsSectionComponent
